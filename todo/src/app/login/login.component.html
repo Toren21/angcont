@@ -1,0 +1,11 @@
+ <div class="page-wrapper">
+ <div class="login-wrapper">
+        <h1>Welcome</h1>
+        <p>Please Login to ATG Solutions Panel</p>
+        <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)" id="login-form">
+            <input type="text" required placeholder="Login" name="fname" ngModel><br>
+            <input type="password" required placeholder="Enter your password" name="lname" ngModel><br>
+            <button type="submit">Submit</button>
+        </form>
+</div>
+</div>

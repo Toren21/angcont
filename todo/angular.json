@@ -13,6 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+
             "outputPath": "dist/todo",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -22,7 +23,7 @@
             "tsConfig": "tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/sources"
             ],
             "styles": [
               "src/styles.css"
