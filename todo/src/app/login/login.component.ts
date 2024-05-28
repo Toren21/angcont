@@ -20,7 +20,7 @@ export class LoginComponent {
     console.log(form.value);
     if (username === 'admin' && password === 'admin') {
       this.cookieService.set('token', 'example-token', 0.01);
-      this.router.navigate(['/main-component']);
+      this.router.navigate(['/main']);
     } else {
       alert('Invalid credentials');
     }
