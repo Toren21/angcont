@@ -3,6 +3,7 @@ import {MainComponent} from './main/main.component';
 import { Routes } from '@angular/router';
 import { AuthGuard } from './guards/auth.guard';
 import { ClientsComponent } from './pages/clients/clients.component';'';
+import { ProjectsComponent } from './pages/projects/projects.component';
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
   {
@@ -13,6 +14,11 @@ export const routes: Routes = [
     {
       path : 'clients',
       component: ClientsComponent,
+      canActivate: [AuthGuard]
+    },
+    {
+      path: 'projects',
+      component: ProjectsComponent,
       canActivate: [AuthGuard]
     }
  ]

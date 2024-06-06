@@ -1,27 +1,25 @@
 import { Component, OnInit } from '@angular/core';
 import { requestService } from '../../requestService';
 import { CommonModule } from '@angular/common';
-
 @Component({
-  selector: 'app-clients',
+  selector: 'app-projects',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './clients.component.html',
-  styleUrl: './clients.component.css'
+  templateUrl: './projects.component.html',
+  styleUrl: './projects.component.css'
 })
-export class ClientsComponent implements OnInit {
+export class ProjectsComponent implements OnInit {
 
-  clients: any[] = [];
+  projects: any[] = [];
   constructor(private req : requestService){};
 
 
   async ngOnInit(): Promise<void>  {
 
 
-      const data = this.req.sendGet('api/v1/clients/getAll').subscribe(
+      const data = this.req.sendGet('api/v1/projects/getAll').subscribe(
         (res: any) => {
-          this.clients = res;
-
+          this.projects = res;
         },
         (error: any) => {
           console.error('Error occurred:', error);

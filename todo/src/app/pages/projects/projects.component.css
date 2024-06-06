@@ -6,6 +6,7 @@
   flex-direction: column;
   margin:50px;
 
+
 }
 .content h2{
   font-family: sans-serif;
@@ -19,15 +20,18 @@
 
   height: 80vh;
   background-color: white;
-  overflow: scroll;
   border-radius: 15px;
+  overflow:scroll;
+
 }
+
 
 .transactions{
   font-family: sans-serif;
   width:90%;
   margin: 25px;
   border-collapse: collapse;
+
 }
 .transactions td{
   padding: 5px 10px 5px 10px;
@@ -52,7 +56,6 @@
   text-align: center;
 
 }
-
 
 
 /* width */

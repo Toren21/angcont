@@ -18,18 +18,18 @@ export class LoginComponent {
 
 
 
-  async onSubmit(form: any): Promise<void> {
-    const username = form.value.fname;
-    const password = form.value.lname;
+     onSubmit(form: any) {
+      const username = form.value.fname;
+      const password = form.value.lname;
 
-    try {
-      const res: any = await this.req.sendPost({username, password});
-      this.cookieService.set('token', res.token, 1);
-      this.router.navigate(['/main']);
-
-    } catch (error) {
-      console.error('Error occurred:', error);
+      this.req.sendPost({ username, password }).subscribe(
+        (res: any) => {
+          this.cookieService.set('token', res.token, 1);
+          this.router.navigate(['/main']);
+        },
+        (error: any) => {
+          console.error('Error occurred:', error);
+        }
+      );
     }
-
-   }
 }
