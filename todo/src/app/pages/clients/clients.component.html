@@ -1,0 +1,22 @@
+<div class="content">
+<h2>Content item</h2>
+<div class="content-item">
+     <table class="transactions">
+         <tr>
+             <th>CODE</th>
+             <th>NAME</th>
+             <th>SURNAME</th>
+             <th>EMAIL</th>
+             <th>NUMBER</th>
+         </tr>
+         <tr *ngFor="let client of clients">
+             <td>{{ client.code }}</td>
+             <td>{{client.name}}</td>
+             <td>{{client.surname}}</td>
+             <td>{{client.email}}</td>
+             <td>{{client.number}}</td>
+
+         </tr>
+     </table>
+ </div>
+</div>

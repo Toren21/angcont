@@ -4,9 +4,9 @@
       <img id="logo" src="sources/logo.png">
       <ul class="sidebar-nav">
           <li>
-              <a href="#">
+              <a routerLink="/main">
                   <img src="sources/dashboard.png">
-                  <span>DashboardTEst</span>
+                  <span>Dashboard</span>
               </a>
           </li>
           <li>
@@ -34,7 +34,7 @@
               </a>
           </li>
           <li>
-              <a href="#">
+              <a routerLink="/main/clients">
                   <img src="sources/in-person.png">
                   <span>Clients</span>
               </a>
@@ -46,70 +46,9 @@
       <div class="head">
           <img src="sources/logout.png">
       </div>
-      <div class="content">
-          <h2>Content item</h2>
-         <div class="content-item">
-              <table class="transactions">
-                  <tr>
-                      <th>CREATED</th>
-                      <th>TRANSID</th>
-                      <th>AMOUNT</th>
-                      <th>CURRENCY</th>
-                      <th>PROJECT</th>
-                      <th>STATUS</th>
-                  </tr>
-                  <tr>
-                      <td>2024-05-27 14:35:58</td>
-                      <td>16409923</td>
-                      <td>300</td>
-                      <td>EUR</td>
-                      <td>Gambl S.R.L</td>
-                      <td>Complete</td>
-                  </tr>
-                  <tr>
-                      <td>2024-05-27 14:35:58</td>
-                      <td>16409923</td>
-                      <td>300</td>
-                      <td>EUR</td>
-                      <td>Gambl S.R.L</td>
-                      <td>Complete</td>
-                  </tr>
-                  <tr>
-                      <td>2024-05-27 14:35:58</td>
-                      <td>16409923</td>
-                      <td>300</td>
-                      <td>EUR</td>
-                      <td>Gambl S.R.L</td>
-                      <td>Complete</td>
-                  </tr>
-                  <tr>
-                      <td>2024-05-27 14:35:58</td>
-                      <td>16409923</td>
-                      <td>300</td>
-                      <td>EUR</td>
-                      <td>Gambl S.R.L</td>
-                      <td>Complete</td>
-                  </tr>
-                  <tr>
-                      <td>2024-05-27 14:35:58</td>
-                      <td>16409923</td>
-                      <td>300</td>
-                      <td>EUR</td>
-                      <td>Gambl S.R.L</td>
-                      <td>Complete</td>
-                  </tr>
-                  <tr>
-                      <td>2024-05-27 14:35:58</td>
-                      <td>16409923</td>
-                      <td>300</td>
-                      <td>EUR</td>
-                      <td>Gambl S.R.L</td>
-                      <td>Complete</td>
-                  </tr>
+      <router-outlet></router-outlet>
 
-              </table>
-          </div>
-      </div>
+
   </div>
 
   </section>

@@ -3,6 +3,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
+import { requestService } from '../requestService';
 
 @Component({
   selector: 'app-login',
@@ -12,17 +13,23 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  constructor(private cookieService: CookieService, private router: Router) {}
+  constructor(private cookieService: CookieService,
+     private router: Router, private req : requestService){};
 
-  onSubmit(form: any): void {
+
+
+  async onSubmit(form: any): Promise<void> {
     const username = form.value.fname;
     const password = form.value.lname;
-    console.log(form.value);
-    if (username === 'admin' && password === 'admin') {
-      this.cookieService.set('token', 'example-token', 0.01);
+
+    try {
+      const res: any = await this.req.sendPost({username, password});
+      this.cookieService.set('token', res.token, 1);
       this.router.navigate(['/main']);
-    } else {
-      alert('Invalid credentials');
+
+    } catch (error) {
+      console.error('Error occurred:', error);
     }
-  }
+
+   }
 }
