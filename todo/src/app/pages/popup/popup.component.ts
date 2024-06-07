@@ -24,14 +24,18 @@ export class PopupComponent {
 
   onSubmit(form: any) {
     console.log(form.value);
-    this.req.sendPost(form.value, 'api/v1/clients/create').subscribe(
-      (res: any) => {
-        this.dialogRef.close();
-      },
-      (error: any) => {
-        console.error('Error occurred:', error);
+    if(form.value[0] === '')
+      this.req.sendPost(form.value, 'api/v1/clients/create').subscribe(
+        (res: any) => {
+          this.dialogRef.close();
+        },
+        (error: any) => {
+          console.error('Error occurred:', error);
+        }
+      );
+      else{
+        console.error('Inavalid data');
       }
-    );
 
 
   }
