@@ -1,0 +1,15 @@
+
+<div class="pop-up-wrapper">
+  <h2 mat-dialog-title>Details</h2>
+  <form mat-dialog-content #dataForm="ngForm" (ngSubmit)="onSubmit(dataForm)" >
+<div *ngFor="let label of data" class="popup-container">
+    <input required placeholder={{label}}
+    name={{label}} ngModel><br>
+</div>
+    <div class="btns">
+      <button (click)="closePopup()" mat-button mat-dialog-close class="close-pop">Close</button>
+      <button type="submit" mat-button mat-dialog-close class="create-pop">Complete</button>
+    </div>
+  </form>
+
+</div>

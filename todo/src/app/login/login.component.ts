@@ -22,7 +22,7 @@ export class LoginComponent {
       const username = form.value.fname;
       const password = form.value.lname;
 
-      this.req.sendPost({ username, password }).subscribe(
+      this.req.sendPost({ username, password },'api/v1/auth/signin').subscribe(
         (res: any) => {
           this.cookieService.set('token', res.token, 1);
           this.router.navigate(['/main']);

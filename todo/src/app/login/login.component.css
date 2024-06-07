@@ -55,6 +55,7 @@
       cursor: pointer;
       transition: 0.3s;
   }
+
   #login-form{
       margin-top: 25px;
       display: flex;

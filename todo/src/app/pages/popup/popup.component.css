@@ -1,0 +1,81 @@
+
+.pop-up-wrapper {
+  width: 350px;
+
+  background-color: #184477;
+  z-index: 100;
+  position: fixed;
+  border-radius: 15px;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.pop-up-wrapper h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+
+.btns{
+display: flex;
+justify-content: space-around;
+
+}
+
+.create-pop{
+  padding:5px 7px 5px 7px;
+  background-color: rgb(51, 158, 51);
+  border: none !important;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+
+.close-pop{
+  padding:5px 7px 5px 7px;
+  background-color: rgb(197, 44, 44);
+  border: none !important;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+}
+
+.popup-container{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+height: 100%;
+
+}
+.popup-container input::placeholder {
+  text-transform: capitalize;
+}
+
+.popup-container input{
+  outline: none;
+  height: 30px;
+  width: 280px;
+  border-radius: 3px;
+  border: 0px;
+  padding: 0px 5px;
+  font-size: 16px;
+
+}
+
+.popup-containert input:focus{
+border:3px solid rgb(68, 105, 207);
+}
+.popup-container input:valid{
+  background-color:rgba(230, 234, 245, 0.774) ;
+  border:1px solid rgb(68, 105, 207);
+}
