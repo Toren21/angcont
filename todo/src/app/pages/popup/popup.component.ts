@@ -24,7 +24,7 @@ export class PopupComponent {
 
   onSubmit(form: any) {
     console.log(form.value);
-    if(form.value[0] === '')
+    if(form.value[0] != '')
       this.req.sendPost(form.value, 'api/v1/clients/create').subscribe(
         (res: any) => {
           this.dialogRef.close();
