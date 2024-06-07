@@ -1,5 +1,9 @@
 <div class="content">
-<h2>Clients</h2>
+<div class="head-content">
+  <h2>Clients</h2>
+  <button>Add New</button>
+  <div><img src="../../../sources/arrows-rotate-solid.svg"></div>
+</div>
 <div class="content-item">
      <table class="transactions">
          <tr>
@@ -8,6 +12,7 @@
              <th>SURNAME</th>
              <th>EMAIL</th>
              <th>NUMBER</th>
+             <th>ACTIONS</th>
          </tr>
          <tr *ngFor="let client of clients">
              <td>{{ client.code }}</td>
@@ -15,7 +20,15 @@
              <td>{{client.surname}}</td>
              <td>{{client.email}}</td>
              <td>{{client.number}}</td>
-
+             <td>
+              <div class="actions"><div data-id={{client.code}} class="delete">
+                <img src="../../../sources/trash-solid.svg">
+             </div>
+                <div data-id={{client.code}} class="update">
+                  <img src="../../../sources/user-pen-solid.svg">
+                </div>
+                </div>
+            </td>
          </tr>
      </table>
  </div>
