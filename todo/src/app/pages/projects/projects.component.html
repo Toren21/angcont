@@ -27,7 +27,13 @@
                <td>{{project.endDate}}</td>
                <td>{{project.clientCode}}</td>
                <td>{{project.percentage}}%</td>
-
+               <div class="actions"><div  (click)="deleteElement(project.code)" class="delete">
+                <img src="../../../sources/trash-solid.svg">
+             </div>
+                <div data-id="{{project.code}}" (click)="openPopup(projects,'update',project.code,'projects')" class="update">
+                  <img src="../../../sources/user-pen-solid.svg">
+                </div>
+                </div>
            </tr>
        </table>
    </div>

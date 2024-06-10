@@ -6,12 +6,11 @@
   flex-direction: column;
   margin:50px;
 
-
 }
 .content h2{
   font-family: sans-serif;
   color: #184477;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 800;
   margin-left: 15px;
   margin-bottom: 10px;
@@ -20,18 +19,15 @@
 
   height: 80vh;
   background-color: white;
+  overflow: scroll;
   border-radius: 15px;
-  overflow:scroll;
-
 }
-
 
 .transactions{
   font-family: sans-serif;
-  width:90%;
+  width:95%;
   margin: 25px;
   border-collapse: collapse;
-
 }
 .transactions td{
   padding: 5px 10px 5px 10px;
@@ -80,7 +76,6 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
-
 
 .head-content{
   display: flex;
@@ -140,6 +135,7 @@
 }
 
 .actions{
+  margin-top: 5px;
   display: flex;
   justify-content: center;
 }

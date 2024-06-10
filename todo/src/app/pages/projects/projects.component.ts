@@ -48,13 +48,13 @@ export class ProjectsComponent implements OnInit {
     }
 
     deleteElement(code : string): void {
-      const data = this.req.sendDelete('api/v1/clients/delete', code).subscribe(
+      const data = this.req.sendDelete('api/v1/projects/delete', code).subscribe(
         (res: any) => {
           this.updateData();
-          this.openSnackBar(`Delete ${code} success`,'OK');
+          this.openSnackBar(`DELETE ${code} success`,'OK');
         },
         (error: any) => {
-          this.openSnackBar(`Delete ${code} error`,'OK');
+          this.openSnackBar(`DELETE ${code} error`,'OK');
           console.error('Error occurred:', error);
         }
       );

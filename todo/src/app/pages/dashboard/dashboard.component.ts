@@ -14,7 +14,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class DashboardComponent  {
   chart: any = [];
-
+  chart1: any = [];
 
   constructor(private req : requestService, public dialog: MatDialog, private _snackBar: MatSnackBar){};
 
@@ -50,6 +50,29 @@ export class DashboardComponent  {
             },
           },
         });
+
+        this.chart1 = new Chart('canvas2', {
+          type: 'bar',
+          data: {
+            labels: ['Previous Month','Current Month'],
+            datasets: [
+              {
+                label: 'Income Last/Current Mounth',
+                data: [res[0].previousMonthIncome, res[0].currentMonthIncome],
+                borderWidth: 1,
+              },
+            ],
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true,
+              },
+            },
+          },
+        });
+
+
         this.openSnackBar('GET Profit success','Ok');
       },
       (error: any) => {

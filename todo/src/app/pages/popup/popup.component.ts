@@ -36,11 +36,11 @@ export class PopupComponent {
       `api/v1/${reqType}/${type}`).subscribe(
         (res: any) => {
           this.dialogRef.close();
-          this.openSnackBar(`${type} ${reqType} success`,'OK');
+          this.openSnackBar(`POST ${type} ${reqType} success`,'OK');
         },
         (error: any) => {
           console.error('Error occurred:', error);
-          this.openSnackBar(`${type} ${reqType} error`,'OK');
+          this.openSnackBar(`POST ${type} ${reqType} error`,'OK');
         }
       );
       else{
