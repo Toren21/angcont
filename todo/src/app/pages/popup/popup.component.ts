@@ -31,7 +31,18 @@ export class PopupComponent {
   onSubmit(form: any, type: string, code: string, reqType: string) {
     // Доделать костыль
     //console.log(code);
-    if(form.value[0] != '')
+
+      if(type == 'update'){
+      form.value.code = code;
+
+      for (let key in form.value) {
+        if (form.value[key] === '' || form.value[key] === null || form.value[key] === undefined) {
+            delete form.value[key];
+        }
+    }
+
+}
+
       this.req.sendPost(form.value,
       `api/v1/${reqType}/${type}`).subscribe(
         (res: any) => {
@@ -43,11 +54,10 @@ export class PopupComponent {
           this.openSnackBar(`POST ${type} ${reqType} error`,'OK');
         }
       );
-      else{
-        console.error('Invalid data');
-      }
+    }
 
 
-  }
 
 }
+
+

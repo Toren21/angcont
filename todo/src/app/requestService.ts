@@ -53,7 +53,6 @@ export class requestService {
 
   ClientModelExample(){
         return [
-          "code",
           "name",
           "surname",
           "email",
@@ -62,7 +61,6 @@ export class requestService {
   }
   ProjectModelExample(){
     return [
-      "code",
       "name",
       "description",
       "status",
