@@ -1,12 +1,13 @@
 <div class="content">
 <div class="head-content">
   <h2>Clients</h2>
-  <button (click)="openPopup(clients)">Add New</button>
+  <button (click)="openPopup(clients,'create','','clients')">Add New</button>
   <div (click)="updateData()"><img src="../../../sources/arrows-rotate-solid.svg"></div>
 </div>
 <div class="content-item">
      <table class="transactions">
          <tr>
+              <th></th>
              <th>CODE</th>
              <th>NAME</th>
              <th>SURNAME</th>
@@ -14,17 +15,18 @@
              <th>NUMBER</th>
              <th>ACTIONS</th>
          </tr>
-         <tr *ngFor="let client of clients">
+         <tr *ngFor="let client of clients; let i = index">
+              <td>{{i +1}}</td>
              <td>{{ client.code }}</td>
              <td>{{client.name}}</td>
              <td>{{client.surname}}</td>
              <td>{{client.email}}</td>
              <td>{{client.number}}</td>
              <td>
-              <div class="actions"><div data-id={{client.code}} class="delete">
+              <div class="actions"><div  (click)="deleteElement(client.code)" class="delete">
                 <img src="../../../sources/trash-solid.svg">
              </div>
-                <div data-id={{client.code}} class="update">
+                <div data-id="{{client.code}}" (click)="openPopup(clients,'update',client.code,'clients')" class="update">
                   <img src="../../../sources/user-pen-solid.svg">
                 </div>
                 </div>

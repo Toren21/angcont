@@ -7,7 +7,7 @@
   position: fixed;
   border-radius: 15px;
   top: 50%;
-  left: 60%;
+  left: 55%;
   transform: translate(-50%, -50%);
   border: 1px solid #ccc;
   padding: 20px;
@@ -22,6 +22,7 @@
 .btns{
 display: flex;
 justify-content: space-around;
+width:100%;
 
 }
 
@@ -78,4 +79,11 @@ border:3px solid rgb(68, 105, 207);
 .popup-container input:valid{
   background-color:rgba(230, 234, 245, 0.774) ;
   border:1px solid rgb(68, 105, 207);
+}
+
+form{
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

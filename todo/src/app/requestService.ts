@@ -36,6 +36,20 @@ export class requestService {
     return this.http.get(`${BASE_URL}/${path}`, httpOptions);
   }
 
+  sendDelete(path: string, code: string): Observable<any>{
+    const token = this.cookieService.get('token');
+
+    const httpOptions = {
+
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${token}`
+      })
+    };
+
+    return this.http.delete(`${BASE_URL}/${path}?code=${code}`, httpOptions);
+  }
+
 
   ClientModelExample(){
         return [
@@ -46,16 +60,18 @@ export class requestService {
           "number"
       ]
   }
-  ClientModel(code: string, name: string, surname: string, email: string, number: number): any {
-      return {
-        "code": code,
-        "name": name,
-        "surname": surname,
-        "email": email,
-        "number": number,
-      }
-
-  }
+  ProjectModelExample(){
+    return [
+      "code",
+      "name",
+      "description",
+      "status",
+      "startDate",
+      "endDate",
+      "clientCode",
+      "percentage"
+  ]
+}
 
 
 }

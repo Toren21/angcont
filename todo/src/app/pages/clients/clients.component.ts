@@ -3,6 +3,7 @@ import { requestService } from '../../requestService';
 import { CommonModule } from '@angular/common';
 import { PopupComponent } from '../popup/popup.component';
 import { MatDialog } from '@angular/material/dialog';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-clients',
@@ -11,45 +12,68 @@ import { MatDialog } from '@angular/material/dialog';
   templateUrl: './clients.component.html',
   styleUrl: './clients.component.css'
 })
+
 export class ClientsComponent implements OnInit {
 
   clients: any[] = [];
-  constructor(private req : requestService, public dialog: MatDialog){};
+  constructor(private req : requestService, public dialog: MatDialog, private _snackBar: MatSnackBar){};
 
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 5000,
+
+    });
+  }
 
   async ngOnInit(): Promise<void>  {
-
-    //console.log(this.req.ClientModel("Claeg","name","surname","email",346346));
 
       const data = this.req.sendGet('api/v1/clients/getAll').subscribe(
         (res: any) => {
           this.clients = res;
-
+          this.openSnackBar('GET Clients success','OK');
         },
         (error: any) => {
           console.error('Error occurred:', error);
+          this.openSnackBar('GET Clients error','OK');
         }
       );
 
     }
 
-    openPopup(client: any): void {
+    openPopup(client: any, type : string, code:string, reqType : string): void {
       this.dialog.open(PopupComponent, {
         width: '400px',
-        data: this.req.ClientModelExample(),
+        data: [this.req.ClientModelExample(), type, code, reqType],
         panelClass: 'custom-dialog-container'
       });
-
-
     }
+
+
+
+
+
+    deleteElement(code : string): void {
+      const data = this.req.sendDelete('api/v1/clients/delete', code).subscribe(
+        (res: any) => {
+          this.updateData();
+          this.openSnackBar(`Delete ${code} success`,'OK');
+        },
+        (error: any) => {
+          this.openSnackBar(`Delete ${code} error`,'OK');
+          console.error('Error occurred:', error);
+        }
+      );
+    };
+
 
     updateData(): void {
       const data = this.req.sendGet('api/v1/clients/getAll').subscribe(
         (res: any) => {
           this.clients = res;
-
+          this.openSnackBar(`GET Clients success`,'OK');
         },
         (error: any) => {
+          this.openSnackBar(`GET Clients success`,'OK');
           console.error('Error occurred:', error);
         }
       );

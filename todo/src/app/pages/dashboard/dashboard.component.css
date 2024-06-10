@@ -1,0 +1,25 @@
+.content{
+  height: 80vh;
+  margin:50px;
+
+}
+.content h2{
+  font-family: sans-serif;
+  color: #184477;
+  font-size: 24px;
+  font-weight: 800;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.content-item{
+  margin-top: 25px;
+  width:600px;
+  height: 300px;
+  background-color: white;
+  border-radius: 15px;
+}
+.content-wrapper{
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+}
