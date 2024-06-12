@@ -28,16 +28,7 @@ export class ProjectsComponent implements OnInit {
   async ngOnInit(): Promise<void>  {
 
 
-      const data = this.req.sendGet('api/v1/projects/getAll').subscribe(
-        (res: any) => {
-          this.projects = res;
-          this.openSnackBar('GET Projects success', 'OK');
-        },
-        (error: any) => {
-          console.error('Error occurred:', error);
-        }
-      );
-
+     this.updateData();
     }
     openPopup(client: any, type : string, code:string, reqType: string): void {
       this.dialog.open(PopupComponent, {
@@ -62,7 +53,20 @@ export class ProjectsComponent implements OnInit {
 
 
     updateData(): void {
-      const data = this.req.sendGet('api/v1/projects/getAll').subscribe(
+
+      const img = document.querySelector('.head-content img');
+
+      if (img) {
+        img.classList.add('rotate');
+
+        img.addEventListener('animationend', () => {
+          img.classList.remove('rotate');
+        }, { once: true });
+      } else {
+        console.error('Image element not found');
+      }
+
+    this.req.sendGet('api/v1/projects/getAll').subscribe(
         (res: any) => {
           this.projects = res;
           this.openSnackBar(`GET projects success`,'OK');

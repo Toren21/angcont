@@ -23,9 +23,10 @@
              <td>{{client.email}}</td>
              <td>{{client.number}}</td>
              <td>
-              <div class="actions"><div  (click)="deleteElement(client.code)" class="delete">
+               <div class="actions">
+                <!-- <div  (click)="deleteElement(client.code)" class="delete">
                 <img src="../../../sources/trash-solid.svg">
-             </div>
+             </div>  -->
                 <div data-id="{{client.code}}" (click)="openPopup(clients,'update',client.code,'clients')" class="update">
                   <img src="../../../sources/user-pen-solid.svg">
                 </div>

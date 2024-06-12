@@ -10,7 +10,7 @@
 .content h2{
   font-family: sans-serif;
   color: #184477;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 800;
   margin-left: 15px;
   margin-bottom: 10px;
@@ -25,7 +25,7 @@
 
 .transactions{
   font-family: sans-serif;
-  width:95%;
+  width:90%;
   margin: 25px;
   border-collapse: collapse;
 }
@@ -52,6 +52,7 @@
   text-align: center;
 
 }
+
 
 
 /* width */
@@ -135,7 +136,6 @@
 }
 
 .actions{
-  margin-top: 5px;
   display: flex;
   justify-content: center;
 }
@@ -152,3 +152,4 @@
 .rotate {
   animation: rotate 1s ease-in-out;
 }
+

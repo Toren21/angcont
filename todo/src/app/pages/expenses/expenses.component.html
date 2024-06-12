@@ -1,0 +1,27 @@
+<div class="content">
+  <div class="head-content">
+  <h2>Expenses</h2>
+    <div (click)="updateData()"><img src="../../../sources/arrows-rotate-solid.svg"></div>
+  </div>
+
+  <div class="content-item">
+       <table class="transactions">
+           <tr>
+            <th></th>
+               <th>CODE</th>
+               <th>DATE</th>
+               <th>AMOUNT</th>
+               <th>DESCRIPTION</th>
+
+
+           </tr>
+           <tr *ngFor="let expense of expenses; let i = index">
+              <td>{{i +1}}</td>
+               <td>{{ expense.code}}</td>
+               <td>{{expense.date}}</td>
+               <td>{{expense.amount}}$</td>
+               <td>{{expense.description}}</td>
+           </tr>
+       </table>
+   </div>
+  </div>
