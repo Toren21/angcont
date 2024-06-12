@@ -10,6 +10,15 @@
       </div>
       <div class="content-item">
         <canvas id="canvas3">{{chart}}</canvas>
+
+
+        <form #dateForm="ngForm" (ngSubmit)="onSubmit(dateForm)" id="date-form">
+          <label>Current Incomes: {{incomes}}$ </label>
+          <label>Current Expenses: {{expenses}}$</label>
+          <input  type="month" name="date" placeholder="Select Date" required ngModel>
+          <button type="submit">Submit</button>
+        </form>
+
       </div>
       <div class="content-item">
         <canvas id="canvas4">{{chart}}</canvas>

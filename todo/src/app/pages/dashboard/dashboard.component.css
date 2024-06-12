@@ -1,6 +1,6 @@
 .content{
   height: 80vh;
-  margin:50px;
+  margin: 15px 0px 0px 25px;
 
 }
 .content h2{
@@ -14,12 +14,80 @@
 .content-item{
   margin: 5px;
   width:45%;
-  height: 45%;
+  height: 35%;
   background-color: white;
   border-radius: 15px;
+  display: flex;
+}
+
+.content-item form{
+  margin: 10px;
+display:flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.content-item form button{
+  margin-bottom: 15px;
+}
+
+
+.content-item form input{
+ margin-bottom: 10px;
 }
 .content-wrapper{
   flex-wrap: wrap;
   display: flex;
   justify-content: space-evenly;
+}
+
+#canvas3{
+
+  padding: 15px;
+  width:350px !important;
+  height: 350px !important;
+}
+
+
+#date-form input {
+  outline: none;
+  height: 30px;
+  width: 280px;
+  border-radius: 3px;
+  border: 0px;
+  padding: 0px 5px;
+  font-size: 16px;
+}
+
+#date-form input:focus {
+  border: 3px solid rgb(68, 105, 207);
+}
+
+#date-form input:valid {
+  background-color: rgba(230, 234, 245, 0.774);
+  border: 1px solid rgb(68, 105, 207);
+}
+
+#date-form button:hover {
+  background-color: rgb(26, 76, 214);
+}
+
+#date-form button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(54, 99, 223);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#date-form label{
+  color: #184477;
+  font-size: 18px;
+  font-family: sans-serif;
+  font-weight:600;
+  margin-bottom: 10px;
 }

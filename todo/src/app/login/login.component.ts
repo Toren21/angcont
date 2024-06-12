@@ -25,7 +25,7 @@ export class LoginComponent {
       this.req.sendPost({ username, password },'api/v1/auth/signin').subscribe(
         (res: any) => {
           this.cookieService.set('token', res.token, 1);
-          this.router.navigate(['/main']);
+          this.router.navigate(['/main/dashboard']);
         },
         (error: any) => {
           console.error('Error occurred:', error);

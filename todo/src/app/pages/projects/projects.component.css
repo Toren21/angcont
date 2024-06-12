@@ -4,13 +4,13 @@
   justify-content: center;
   height: 80vh;
   flex-direction: column;
-  margin:50px;
+  margin: 15px 50px 0px 50px;
 
 }
 .content h2{
   font-family: sans-serif;
   color: #184477;
-  font-size: 18px;
+  font-size: 24px;
   font-weight: 800;
   margin-left: 15px;
   margin-bottom: 10px;
