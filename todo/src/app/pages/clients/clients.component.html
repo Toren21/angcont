@@ -30,6 +30,10 @@
                 <div data-id="{{client.code}}" (click)="openPopup(clients,'update',client.code,'clients')" class="update">
                   <img src="../../../sources/user-pen-solid.svg">
                 </div>
+                <div data-id="{{client.code}}" (click)="openLastPopup(client.code)">
+                  <img src="../../../sources/info.png" class="info">
+                </div>
+
                 </div>
             </td>
          </tr>

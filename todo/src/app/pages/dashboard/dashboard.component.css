@@ -18,6 +18,7 @@
   background-color: white;
   border-radius: 15px;
   display: flex;
+  justify-content: center;
 }
 
 .content-item form{
@@ -52,7 +53,7 @@ display:flex;
 #date-form input {
   outline: none;
   height: 30px;
-  width: 280px;
+  width: 230px;
   border-radius: 3px;
   border: 0px;
   padding: 0px 5px;
@@ -90,4 +91,74 @@ display:flex;
   font-family: sans-serif;
   font-weight:600;
   margin-bottom: 10px;
+}
+
+.counts{
+  display: flex;
+
+  width: 100%;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.counts label{
+  color: #184477;
+  font-size: 24px;
+  font-family: sans-serif;
+  font-weight:600;
+  margin-bottom: 10px;
+}
+.count-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.head-content{
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.head-content button{
+  padding:10px 15px 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(51, 158, 51);
+  color: white;
+  font-size: 16px;
+  transition:0.3s;
+  font-weight: 600;
+}
+.head-content button:hover{
+  background-color:rgb(71, 184, 71) ;
+}
+
+
+.head-content img {
+  width:25px;
+
+}
+.head-content div{
+  margin-left: 10px;
+  background-color: #2965aa;
+  padding: 5px 7px 5px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 1s ease-in-out;
 }

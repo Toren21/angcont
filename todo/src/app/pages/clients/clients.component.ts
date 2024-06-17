@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { requestService } from '../../requestService';
 import { CommonModule } from '@angular/common';
 import { PopupComponent } from '../popup/popup.component';
+import { PopupLastTranzComponent } from '../popup-last-tranz/popup-last-tranz.component';
 import { MatDialog } from '@angular/material/dialog';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
@@ -39,6 +40,13 @@ export class ClientsComponent implements OnInit {
       });
     }
 
+    openLastPopup(code : string): void {
+      this.dialog.open(PopupLastTranzComponent, {
+        width: '650px',
+        data: [code],
+        panelClass: 'custom-dialog-container'
+      });
+    }
 
 
 

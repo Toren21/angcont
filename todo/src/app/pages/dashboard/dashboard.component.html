@@ -1,6 +1,8 @@
 <div class="content">
   <div class="head-content">
     <h2>Dashboard</h2>
+    <div (click)="updateCharts()"><img src="../../../sources/arrows-rotate-solid.svg"></div>
+    </div>
     <div class="content-wrapper">
     <div class="content-item">
       <canvas id="canvas">{{chart}}</canvas>
@@ -21,9 +23,21 @@
 
       </div>
       <div class="content-item">
-        <canvas id="canvas4">{{chart}}</canvas>
+        <div class="counts">
+          <div class="count-item">
+            <label>Projects count</label>
+            <label>{{project}}</label>
+          </div>
+          <div class="count-item">
+            <label>Clients count</label>
+            <label>{{client}}</label>
+          </div>
+          <div class="count-item">
+            <label>Products count</label>
+            <label>{{product}}</label>
+          </div>
+
+          </div>
       </div>
       </div>
   </div>
-
-</div>

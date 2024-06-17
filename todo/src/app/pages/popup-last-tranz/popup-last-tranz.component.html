@@ -1,0 +1,25 @@
+<div class="pop-up-wrapper">
+  <h2>User Last Transaction {{data[0]}}</h2>
+
+  <div class="info-about">
+      <div class="left-section">
+
+        <input value="{{clientData.name}}" readonly ngModel required><br>
+        <input value="{{clientData.surname}}" readonly ngModel required><br>
+        <input value="{{clientData.email}}" readonly ngModel required><br>
+        <input value="{{clientData.number}}" readonly ngModel required><br>
+      </div>
+        <div class="rigth-section">
+          <table class="transactions">
+          <tr *ngFor="let row of history; let i = index">
+            <td>{{i +1}}</td>
+           <td>{{row.date}}</td>
+           <td>{{row.price}}$</td>
+       </tr>
+      </table>
+
+        </div>
+
+  </div>
+  <button type="button" (click)="closePopup()" mat-button mat-dialog-close class="close-pop">Close</button>
+</div>

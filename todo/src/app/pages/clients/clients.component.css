@@ -136,6 +136,12 @@
   cursor: pointer;
 }
 
+.info{
+  width: 35px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 .actions{
   display: flex;
   justify-content: center;

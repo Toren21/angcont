@@ -30,7 +30,6 @@ export class PopupComponent {
 
   onSubmit(form: any, type: string, code: string, reqType: string) {
     // Доделать костыль
-    //console.log(code);
 
       if(type == 'update'){
       form.value.code = code;
