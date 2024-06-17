@@ -1,1 +1,39 @@
-<p>stock works!</p>
+<div class="content">
+  <div class="head-content">
+    <h2>Clients</h2>
+    <button (click)="openPopup(products,'create','','products')">Add New</button>
+    <div (click)="updateData()"><img src="../../../sources/arrows-rotate-solid.svg"></div>
+  </div>
+  <div class="content-item">
+       <table class="transactions">
+           <tr>
+                <th></th>
+               <th>CODE</th>
+               <th>NAME</th>
+               <th>DESCRIPTION</th>
+               <th>PRICE</th>
+               <th>ACTIONS</th>
+
+           </tr>
+           <tr *ngFor="let product of products; let i = index">
+                <td>{{i +1}}</td>
+               <td>{{ product.code }}</td>
+               <td>{{product.name}}</td>
+               <td>{{product.description}}</td>
+               <td>{{product.price}}$</td>
+
+               <td>
+                 <div class="actions">
+                  <div  (click)="deleteElement(product.code)" class="delete">
+                  <img src="../../../sources/trash-solid.svg">
+               </div>
+                  <div data-id="{{product.code}}" (click)="openPopup(products,'update',product.code,'products')" class="update">
+                    <img src="../../../sources/user-pen-solid.svg">
+                  </div>
+
+                  </div>
+              </td>
+           </tr>
+       </table>
+   </div>
+  </div>

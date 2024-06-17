@@ -7,6 +7,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { IncomesComponent } from './pages/incomes/incomes.component';
 import { ExpensesComponent } from './pages/expenses/expenses.component';
+import { StockComponent } from './pages/stock/stock.component';
 
 export const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -38,6 +39,11 @@ export const routes: Routes = [
     {
       path: 'expenses',
       component: ExpensesComponent,
+      canActivate: [AuthGuard]
+    },
+    {
+      path: 'products',
+      component: StockComponent,
       canActivate: [AuthGuard]
     }
  ]

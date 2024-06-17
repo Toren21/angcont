@@ -1,0 +1,162 @@
+
+.content{
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  flex-direction: column;
+  margin: 15px 50px 0px 50px;
+
+}
+.content h2{
+  font-family: sans-serif;
+  color: #184477;
+  font-size: 24px;
+  font-weight: 800;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+.content-item{
+
+  height: 80vh;
+  background-color: white;
+  overflow: scroll;
+  border-radius: 15px;
+}
+
+.transactions{
+  font-family: sans-serif;
+  width:90%;
+  margin: 25px;
+  border-collapse: collapse;
+}
+.transactions td{
+  padding: 5px 10px 5px 10px;
+}
+.transactions tr:hover{
+  background-color: rgb(230, 230, 230);
+}
+.transactions td{
+  color: black;
+  border-left: 1px solid gray;
+  font-family: sans-serif;
+  font-size: 18px;
+ text-align: center;
+ width:10%;
+
+}
+
+.transactions th{
+  color: #184477;
+  border-left: 1px solid gray;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #184477;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.head-content{
+  display: flex;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.head-content button{
+  padding:10px 15px 10px 15px;
+  border-radius: 5px;
+  border: none;
+  margin-left: 10px;
+  cursor: pointer;
+  background-color: rgb(51, 158, 51);
+  color: white;
+  font-size: 16px;
+  transition:0.3s;
+  font-weight: 600;
+}
+.head-content button:hover{
+  background-color:rgb(71, 184, 71) ;
+}
+
+.head-content img {
+  width:25px;
+
+}
+.head-content div{
+  margin-left: 10px;
+  background-color: #2965aa;
+  padding: 5px 7px 5px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.head-content div:hover{
+  background-color: #3478c7;
+}
+
+.delete {
+  background-color: rgb(197, 44, 44);
+  width: 20px;
+  padding: 5px 7px 5px 7px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.update{
+  background-color: rgb(189, 139, 31);
+  width: 20px;
+  padding: 5px 7px 5px 7px;
+  border-radius: 5px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.info{
+  width: 35px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.actions{
+  display: flex;
+  justify-content: center;
+}
+
+
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.rotate {
+  animation: rotate 1s ease-in-out;
+}

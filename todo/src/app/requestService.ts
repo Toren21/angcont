@@ -72,4 +72,15 @@ export class requestService {
 }
 
 
+StockModelExample(){
+  return [
+    "name",
+    "description",
+    "price"
+
+]
+}
+
+
+
 }
