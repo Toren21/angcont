@@ -50,47 +50,6 @@ export class DashboardComponent {
   }
   async ngOnInit(): Promise<void> {
 
-    this.updateCharts();
-
-  }
-
-  async getSummary(mounth: number, year: number) {
-
-    this.req.sendGet(`api/v1/monthly/summary?month=${mounth}&year=${year}`).subscribe(
-      (res: any) => {
-
-        this.incomes = res[0].monthIncome;
-        this.expenses = res[0].monthExpense;
-        this.chart2.data.datasets[0].data = [res[0].monthIncome, res[0].monthExpense];
-
-
-        this.chart2.update();
-
-      },
-      (error: any) => {
-        console.error('Error occurred:', error);
-        this.openSnackBar('GET Profit error', 'Ok');
-      }
-    );
-
-
-  }
-
-
-  async updateCharts() {
-
-    const img = document.querySelector('.head-content img');
-
-      if (img) {
-        img.classList.add('rotate');
-
-        img.addEventListener('animationend', () => {
-          img.classList.remove('rotate');
-        }, { once: true });
-      } else {
-        console.error('Image element not found');
-      }
-
     var date = new Date();
 
 
@@ -259,6 +218,47 @@ export class DashboardComponent {
 
   }
 
+
+  async getSummary(mounth: number, year: number) {
+
+    this.req.sendGet(`api/v1/monthly/summary?month=${mounth}&year=${year}`).subscribe(
+      (res: any) => {
+
+        this.incomes = res[0].monthIncome;
+        this.expenses = res[0].monthExpense;
+        this.chart2.data.datasets[0].data = [res[0].monthIncome, res[0].monthExpense];
+
+
+        this.chart2.update();
+
+      },
+      (error: any) => {
+        console.error('Error occurred:', error);
+        this.openSnackBar('GET Profit error', 'Ok');
+      }
+    );
+
+
+  }
+
+
+  async updateCharts() {
+
+    const img = document.querySelector('.head-content img');
+
+    if (img) {
+      img.classList.add('rotate');
+
+      img.addEventListener('animationend', () => {
+        img.classList.remove('rotate');
+      }, { once: true });
+    } else {
+      console.error('Image element not found');
+    }
+
+
+
+  }
 }
 
 
