@@ -1,0 +1,149 @@
+
+.pop-up-wrapper {
+  width: 600px;
+
+  background-color: #184477;
+  z-index: 100;
+  position: fixed;
+  border-radius: 15px;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.pop-up-wrapper h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.close-pop{
+  padding:5px 7px 5px 7px;
+  background-color: rgb(197, 44, 44);
+  border: none !important;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  margin-top: 15px;
+}
+
+.info-about{
+  display: flex;
+  justify-content:space-between ;
+}
+.left-section input{
+  font-family: sans-serif;
+  outline: none;
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+  border: 0px;
+  padding: 0px 5px;
+  font-size: 16px;
+  margin-top:5px;
+  background-color:rgba(230, 234, 245, 0.774)  ;
+}
+
+textarea{
+  font-family: sans-serif;
+  outline: none;
+  height: 30px;
+  width: 100%;
+  border-radius: 3px;
+  border: 0px;
+  padding: 3px 7px;
+  font-size: 16px;
+  margin-top:5px;
+  background-color:rgba(230, 234, 245, 0.774)  ;
+}
+
+.transactions{
+  height: 200px;
+  overflow:scroll;
+  font-family: sans-serif;
+  width:100%;
+  border-collapse: collapse;
+  background-color:rgba(230, 234, 245, 0.774);
+  border-radius: 5px;
+}
+
+.transactions tr:hover{
+  background-color: rgb(188, 187, 204);
+}
+
+.transactions tr{
+  height: 30px;
+}
+.transactions td{
+  color: black;
+  border-left: 1px solid gray;
+  font-family: sans-serif;
+  font-size: 18px;
+ text-align: center;
+ width:10%;
+
+}
+
+.transactions th{
+  color: #184477;
+  border-left: 1px solid gray;
+  font-family: sans-serif;
+  font-size: 18px;
+  text-align: center;
+
+}
+
+.rigth-section{
+  width:30%;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rigth-section img{
+ width:100%;
+ opacity: 0.6;
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  border-radius: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #184477;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.popup-container input::placeholder {
+  text-transform: capitalize;
+}
+.create-pop{
+  padding:5px 7px 5px 7px;
+  background-color: rgb(51, 158, 51);
+  border: none !important;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  margin-right: 15px;
+}

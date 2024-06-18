@@ -128,7 +128,7 @@
 .update{
   background-color: rgb(189, 139, 31);
   width: 20px;
-  padding: 5px 7px 5px 7px;
+  padding: 7px 9px 7px 9px;
   border-radius: 5px;
   margin-left: 10px;
   display: flex;
@@ -142,9 +142,16 @@
   cursor: pointer;
 }
 
+.mail{
+  width: 27px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
 .actions{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 

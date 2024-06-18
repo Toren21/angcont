@@ -14,9 +14,6 @@ import { FormsModule } from '@angular/forms';
 })
 export class SalePopupComponent {
 
-
-  clientData: any;
-  history: any[] = [];
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: any,
     private dialogRef: MatDialogRef<PopupLastTranzComponent>, private req: requestService, private _snackBar: MatSnackBar

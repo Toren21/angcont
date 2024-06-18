@@ -33,7 +33,9 @@
                 <div data-id="{{client.code}}" (click)="openLastPopup(client.code)">
                   <img src="../../../sources/info.png" class="info">
                 </div>
-
+                <div data-id="{{client.code}}" (click)="openMailPopup(client.code, client.email)">
+                  <img src="../../../sources/mail.png" class="mail">
+                </div>
                 </div>
             </td>
          </tr>

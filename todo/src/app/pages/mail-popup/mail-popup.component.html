@@ -1,0 +1,39 @@
+<div class="pop-up-wrapper">
+  <h2>Send mail to {{data[0]}}</h2>
+
+  <div class="info-about">
+      <div class="left-section">
+
+        <form mat-dialog-content #dataForm="ngForm" (ngSubmit)="onSubmit(dataForm) ">
+          <div class="popup-container">
+            <input
+            placeholder="Mail"
+            name="email"
+            type="email"
+            [(ngModel)]="data[1]"><br>
+            <input
+            placeholder="Subject"
+            name="subject"
+            type="text"
+            ngModel><br>
+            <textarea
+            placeholder="Message"
+            name="text"
+            [(ngModel)]="data.message"></textarea><br>
+          </div>
+
+
+
+          <button type="submit" mat-button mat-dialog-close class="create-pop">Complete</button>
+          <button type="button" (click)="closePopup()" mat-button mat-dialog-close class="close-pop">Close</button>
+        </form>
+
+      </div>
+        <div class="rigth-section">
+          <img src="../../../sources/popmail.png">
+
+        </div>
+
+  </div>
+
+</div>

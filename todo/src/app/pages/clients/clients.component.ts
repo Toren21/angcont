@@ -5,6 +5,7 @@ import { PopupComponent } from '../popup/popup.component';
 import { PopupLastTranzComponent } from '../popup-last-tranz/popup-last-tranz.component';
 import { MatDialog } from '@angular/material/dialog';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { MailPopupComponent } from '../mail-popup/mail-popup.component';
 
 @Component({
   selector: 'app-clients',
@@ -44,6 +45,14 @@ export class ClientsComponent implements OnInit {
       this.dialog.open(PopupLastTranzComponent, {
         width: '650px',
         data: [code],
+        panelClass: 'custom-dialog-container'
+      });
+    }
+
+    openMailPopup(code : string, email : string): void {
+      this.dialog.open(MailPopupComponent, {
+        width: '650px',
+        data: [code, email],
         panelClass: 'custom-dialog-container'
       });
     }
