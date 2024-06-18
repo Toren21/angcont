@@ -77,10 +77,10 @@ export class StockComponent {
     this.req.sendGet('api/v1/products/getAll').subscribe(
       (res: any) => {
         this.products = res;
-        this.openSnackBar(`GET Clients success`, 'OK');
+        this.openSnackBar(`GET Products success`, 'OK');
       },
       (error: any) => {
-        this.openSnackBar(`GET Clients success`, 'OK');
+        this.openSnackBar(`GET Products success`, 'OK');
         console.error('Error occurred:', error);
       }
     );

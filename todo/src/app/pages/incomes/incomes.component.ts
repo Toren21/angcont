@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { requestService} from '../../requestService';
 import { CommonModule } from '@angular/common';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { SalePopupComponent } from '../sale-popup/sale-popup.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-incomes',
@@ -11,7 +13,7 @@ import {MatSnackBar} from '@angular/material/snack-bar';
   styleUrl: './incomes.component.css'
 })
 export class IncomesComponent  {
-  constructor(private req : requestService, private _snackBar: MatSnackBar){};
+  constructor(private req : requestService, private _snackBar: MatSnackBar, public dialog: MatDialog){};
 
   incomes: any[] = [];
   ngOnInit(): void {
@@ -24,7 +26,13 @@ export class IncomesComponent  {
 
     });
   }
-
+  openPopup(client: any, type : string, code:string, reqType : string): void {
+    this.dialog.open(SalePopupComponent, {
+      width: '400px',
+      data: [this.req.SaleModelExample(), type, code, reqType],
+      panelClass: 'custom-dialog-container'
+    });
+  }
 
   updateData(){
     const img = document.querySelector('.head-content img');

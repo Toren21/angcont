@@ -12,13 +12,16 @@
 
 #logo{
   width:200px;
+  opacity: 0.4;
 }
 
 .sidebar img{
   width:50px;
+  opacity: 0.8;
 }
 
 .sidebar span{
+  opacity: 0.8;
   font-family: sans-serif;
   color: white;
   font-size: 16px;

@@ -69,10 +69,10 @@ export class ProjectsComponent implements OnInit {
     this.req.sendGet('api/v1/projects/getAll').subscribe(
         (res: any) => {
           this.projects = res;
-          this.openSnackBar(`GET projects success`,'OK');
+          this.openSnackBar(`GET Projects success`,'OK');
         },
         (error: any) => {
-          this.openSnackBar(`GET project success`,'OK');
+          this.openSnackBar(`GET Project success`,'OK');
           console.error('Error occurred:', error);
         }
       );

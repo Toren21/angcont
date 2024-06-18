@@ -81,6 +81,16 @@ StockModelExample(){
 ]
 }
 
+SaleModelExample(){
+  return [
+    "date",
+    "price",
+    "clientCode",
+    "productCode",
+
+]
+}
+
 
 
 }
