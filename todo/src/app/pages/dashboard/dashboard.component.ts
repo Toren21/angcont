@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Chart } from 'chart.js/auto';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { PdfGenerateComponent } from '../pdf-generate/pdf-generate.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true,
@@ -157,8 +158,8 @@ export class DashboardComponent {
             datasets: [{
               label: 'Amount',
               data: [res[0].monthIncome, res[0].monthExpense],
-              backgroundColor: ['rgba(0, 204, 0, 0.7)', 'rgba(187, 13, 13, 0.7)'],
-              borderColor: ['rgba(54, 162, 235, 1)', 'rgba(255, 99, 132, 1)'],
+              backgroundColor: ['#76B245', '#E95B5B'],
+
               borderWidth: 1
             }]
           },
@@ -259,6 +260,15 @@ export class DashboardComponent {
 
 
   }
+
+  openPopup(type: string, code: string, reqType: string): void {
+    this.dialog.open(PdfGenerateComponent, {
+      width: '400px',
+      data: [type, code, reqType],
+      panelClass: 'custom-dialog-container'
+    });
+  }
+
 }
 
 

@@ -25,8 +25,8 @@
 
 .transactions{
   font-family: sans-serif;
-  width:95%;
-  margin: 25px;
+  width:99%;
+  margin: 25px 5px 5px 5px;
   border-collapse: collapse;
 }
 .transactions td{

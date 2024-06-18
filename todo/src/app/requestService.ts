@@ -1,12 +1,12 @@
-import { HttpClientModule, HttpHeaders, HttpClient} from "@angular/common/http";
-import {BASE_URL} from './config';
+import { HttpClientModule, HttpHeaders, HttpClient } from "@angular/common/http";
+import { BASE_URL } from './config';
 import { Injectable } from "@angular/core";
 import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
 
-@Injectable({providedIn: 'root'})
+@Injectable({ providedIn: 'root' })
 export class requestService {
-  constructor(private http: HttpClient, private cookieService: CookieService){};
+  constructor(private http: HttpClient, private cookieService: CookieService) { };
 
 
   sendPost(body: any, path: string): Observable<any> {
@@ -15,14 +15,14 @@ export class requestService {
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-          'Authorization': `Bearer ${token}`
+        'Authorization': `Bearer ${token}`
       })
     };
 
     return this.http.post(`${BASE_URL}/${path}`, body, httpOptions);
   }
   //api/v1/auth/signin
- sendGet(path : string): Observable<any>{
+  sendGet(path: string): Observable<any> {
     const token = this.cookieService.get('token');
 
     const httpOptions = {
@@ -36,7 +36,7 @@ export class requestService {
     return this.http.get(`${BASE_URL}/${path}`, httpOptions);
   }
 
-  sendDelete(path: string, code: string): Observable<any>{
+  sendDelete(path: string, code: string): Observable<any> {
     const token = this.cookieService.get('token');
 
     const httpOptions = {
@@ -51,15 +51,15 @@ export class requestService {
   }
 
 
-  ClientModelExample(){
-        return [
-          "name",
-          "surname",
-          "email",
-          "number"
-      ]
+  ClientModelExample() {
+    return [
+      "name",
+      "surname",
+      "email",
+      "number"
+    ]
   }
-  ProjectModelExample(){
+  ProjectModelExample() {
     return [
       "name",
       "description",
@@ -67,29 +67,39 @@ export class requestService {
       "startDate",
       "endDate",
       "clientCode",
-      "percentage"
-  ]
-}
+      "percentage",
+      "budget"
+    ]
+  }
 
+  StockModelExample() {
+    return [
+      "name",
+      "description",
+      "price"
 
-StockModelExample(){
-  return [
-    "name",
-    "description",
-    "price"
+    ]
+  }
 
-]
-}
+  SaleModelExample() {
+    return [
+      "date",
+      "price",
+      "clientCode",
+      "productCode",
 
-SaleModelExample(){
-  return [
-    "date",
-    "price",
-    "clientCode",
-    "productCode",
+    ]
+  }
 
-]
-}
+  ExpenseModelExample() {
+    return [
+      "date",
+      "amount",
+      "description",
+      "projectCode",
+
+    ]
+  }
 
 
 

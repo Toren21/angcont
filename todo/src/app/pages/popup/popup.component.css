@@ -87,3 +87,8 @@ form{
     justify-content: center;
     align-items: center;
 }
+
+
+h2{
+  text-transform: capitalize;
+}

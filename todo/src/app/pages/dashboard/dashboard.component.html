@@ -2,42 +2,46 @@
   <div class="head-content">
     <h2>Dashboard</h2>
     <div (click)="updateCharts()"><img src="../../../sources/arrows-rotate-solid.svg"></div>
-    </div>
-    <div class="content-wrapper">
+  </div>
+  <div class="content-wrapper">
     <div class="content-item">
       <canvas id="canvas">{{chart}}</canvas>
-      </div>
-      <div class="content-item">
-        <canvas id="canvas2">{{chart1}}</canvas>
-      </div>
-      <div class="content-item">
-        <canvas id="canvas3">{{chart}}</canvas>
+    </div>
+    <div class="content-item">
+      <canvas id="canvas2">{{chart1}}</canvas>
+    </div>
+    <div class="content-item">
+      <canvas id="canvas3">{{chart}}</canvas>
 
 
-        <form #dateForm="ngForm" (ngSubmit)="onSubmit(dateForm)" id="date-form">
-          <label>Current Incomes: {{incomes}}$ </label>
-          <label>Current Expenses: {{expenses}}$</label>
-          <input  type="month" name="date" placeholder="Select Date" required ngModel>
-          <button type="submit">Submit</button>
-        </form>
+      <form #dateForm="ngForm" (ngSubmit)="onSubmit(dateForm)" id="date-form">
+        <label>Current Incomes: {{incomes}}$ </label>
+        <label>Current Expenses: {{expenses}}$</label>
+        <input type="month" name="date" placeholder="Select Date" required ngModel>
+        <button type="submit">Submit</button>
+      </form>
 
+    </div>
+    <div class="content-item">
+      <div class="wrap">
+      <div class="counts">
+        <div class="count-item">
+          <label>Projects count</label>
+          <label>{{project}}</label>
+        </div>
+        <div class="count-item">
+          <label>Clients count</label>
+          <label>{{client}}</label>
+        </div>
+        <div class="count-item">
+          <label>Products count</label>
+          <label>{{product}}</label>
+        </div>
       </div>
-      <div class="content-item">
-        <div class="counts">
-          <div class="count-item">
-            <label>Projects count</label>
-            <label>{{project}}</label>
-          </div>
-          <div class="count-item">
-            <label>Clients count</label>
-            <label>{{client}}</label>
-          </div>
-          <div class="count-item">
-            <label>Products count</label>
-            <label>{{product}}</label>
-          </div>
+      <div id="download" (click)="openPopup('create','','expenses')">Download PDF</div>
+    </div>
 
-          </div>
-      </div>
-      </div>
+    </div>
+
   </div>
+</div>

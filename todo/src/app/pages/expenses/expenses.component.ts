@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
-import { requestService} from '../../requestService';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { requestService } from '../../requestService';
 import { CommonModule } from '@angular/common';
-
+import { MatDialog } from '@angular/material/dialog';
+import { ExpensePopupComponent } from '../expense-popup/expense-popup.component';
 @Component({
   selector: 'app-expenses',
   standalone: true,
@@ -11,7 +12,7 @@ import { CommonModule } from '@angular/common';
   styleUrl: './expenses.component.css'
 })
 export class ExpensesComponent {
-  constructor(private req : requestService, private _snackBar: MatSnackBar){};
+  constructor(private req: requestService, private _snackBar: MatSnackBar, public dialog: MatDialog) { };
   expenses: any[] = [];
   ngOnInit(): void {
     this.updateData();
@@ -23,8 +24,15 @@ export class ExpensesComponent {
 
     });
   }
+  openPopup(client: any, type: string, code: string, reqType: string): void {
+    this.dialog.open(ExpensePopupComponent, {
+      width: '400px',
+      data: [this.req.ExpenseModelExample(), type, code, reqType],
+      panelClass: 'custom-dialog-container'
+    });
+  }
 
-  updateData(){
+  updateData() {
     const img = document.querySelector('.head-content img');
 
     if (img) {
@@ -39,11 +47,11 @@ export class ExpensesComponent {
 
 
 
-    this.req.sendGet('api/v1/expenses/getAll').subscribe((res : any) => {
+    this.req.sendGet('api/v1/expenses/getAll').subscribe((res: any) => {
       this.expenses = res;
       console.log(res);
       this.openSnackBar('GET Expenses success', 'OK');
-    }, (err : any) => {
+    }, (err: any) => {
       this.openSnackBar('GET Expenses error', 'OK');
       console.error('Error occurred:', err);
     });

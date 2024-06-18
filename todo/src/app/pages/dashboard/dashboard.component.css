@@ -77,12 +77,13 @@ display:flex;
   padding: 10px 15px;
   border-radius: 5px;
   border: 0px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 500;
   background-color: rgb(54, 99, 223);
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  font-family: sans-serif;
 }
 
 #date-form label{
@@ -161,4 +162,29 @@ display:flex;
 
 .rotate {
   animation: rotate 1s ease-in-out;
+}
+
+.wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#download:hover {
+  background-color: rgb(26, 76, 214);
+}
+
+#download{
+  text-align: center;
+  margin-bottom: 25px;
+  width:150px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: rgb(54, 99, 223);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
 }

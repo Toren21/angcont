@@ -1,0 +1,53 @@
+<div class="pop-up-wrapper">
+  <h2>Download PDF</h2>
+
+  <div class="info-about">
+      <div class="left-section">
+
+        <form mat-dialog-content #dataForm="ngForm" (ngSubmit)="onSubmit(dataForm, data[1], data[2], data[3])">
+          <div class="popup-container">
+            <input
+              type="date"
+              placeholder="Date"
+              name="date"
+              [ngModel]="getCurrentDate()"
+              required
+            ><br>
+          <div class="trans-type">
+            <label>
+              <input
+                type="radio"
+                name="transactionType"
+                [(ngModel)]="transactionType"
+                value="Incomes"
+                required
+              >
+              Incomes
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="transactionType"
+                [(ngModel)]="transactionType"
+                value="Expenses"
+                required
+              >
+              Expenses
+            </label>
+            </div>
+          </div>
+
+          <button type="submit" mat-button mat-dialog-close class="create-pop">Download</button>
+          <button type="button" (click)="closePopup()" mat-button mat-dialog-close class="close-pop">Close</button>
+        </form>
+
+
+      </div>
+        <div class="rigth-section">
+          <img src="sources/document.png">
+
+        </div>
+
+  </div>
+
+</div>

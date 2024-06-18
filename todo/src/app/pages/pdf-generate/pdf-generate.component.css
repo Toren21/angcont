@@ -36,6 +36,7 @@
   justify-content:space-between ;
 }
 .left-section input{
+  font-family: sans-serif;
   outline: none;
   height: 30px;
   width: 100%;
@@ -49,7 +50,7 @@
 
 .transactions{
   height: 200px;
-
+  overflow:scroll;
   font-family: sans-serif;
   width:100%;
   border-collapse: collapse;
@@ -84,10 +85,16 @@
 }
 
 .rigth-section{
-  width:60%;
+  width:30%;
   padding: 5px;
-  height: 200px;
-  overflow: scroll;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rigth-section img{
+ width:100%;
+ opacity: 0.8;
 }
 
 
@@ -99,16 +106,49 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #184477;
+  background: #f1f1f1;
 
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #12345a;
+  background: #184477;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+.popup-container input::placeholder {
+  text-transform: capitalize;
+}
+.create-pop{
+  padding:5px 7px 5px 7px;
+  background-color: rgb(51, 158, 51);
+  border: none !important;
+  width: 150px;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+  margin-right: 15px;
+}
+
+.trans-type{
+  display: flex;
+  justify-content: flex-start;
+  gap:5px;
+}
+.trans-type input {
+
+  width: 20px;
+}
+
+.trans-type label {
+  justify-content:space-between;
+  display: flex;
+  width: 90px;
+
+  align-items:flex-end;
 }

@@ -8,10 +8,11 @@
   <div class="content-item">
        <table class="transactions">
            <tr>
-               <th>CODE</th>
+            <th>CODE</th>
                <th>NAME</th>
                <th>DESCRIPTION</th>
                <th>STATUS</th>
+               <th>BUDGET</th>
                <th>STARTDATE</th>
                <th>ENDDATE</th>
                <th>CLIENTCODE</th>
@@ -19,10 +20,11 @@
 
            </tr>
            <tr *ngFor="let project of projects">
-               <td>{{ project.code}}</td>
+              <td>{{project.code}}</td>
                <td>{{project.name}}</td>
                <td>{{project.description}}</td>
                <td>{{project.status}}</td>
+               <td>{{project.budget}}$</td>
                <td>{{project.startDate}}</td>
                <td>{{project.endDate}}</td>
                <td>{{project.clientCode}}</td>
