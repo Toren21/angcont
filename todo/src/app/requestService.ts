@@ -21,7 +21,7 @@ export class requestService {
 
     return this.http.post(`${BASE_URL}/${path}`, body, httpOptions);
   }
-  //api/v1/auth/signin
+
   sendGet(path: string): Observable<any> {
     const token = this.cookieService.get('token');
 

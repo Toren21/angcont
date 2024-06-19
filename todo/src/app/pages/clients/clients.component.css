@@ -1,5 +1,4 @@
-
-.content{
+.content {
   display: flex;
   justify-content: center;
   height: 80vh;
@@ -7,7 +6,8 @@
   margin: 15px 50px 0px 50px;
 
 }
-.content h2{
+
+.content h2 {
   font-family: sans-serif;
   color: #184477;
   font-size: 24px;
@@ -15,7 +15,8 @@
   margin-left: 15px;
   margin-bottom: 10px;
 }
-.content-item{
+
+.content-item {
 
   height: 80vh;
   background-color: white;
@@ -23,29 +24,32 @@
   border-radius: 15px;
 }
 
-.transactions{
+.transactions {
   font-family: sans-serif;
-  width:90%;
+  width: 90%;
   margin: 25px;
   border-collapse: collapse;
 }
-.transactions td{
+
+.transactions td {
   padding: 5px 10px 5px 10px;
 }
-.transactions tr:hover{
+
+.transactions tr:hover {
   background-color: rgb(230, 230, 230);
 }
-.transactions td{
+
+.transactions td {
   color: black;
   border-left: 1px solid gray;
   font-family: sans-serif;
   font-size: 18px;
- text-align: center;
- width:10%;
+  text-align: center;
+  width: 10%;
 
 }
 
-.transactions th{
+.transactions th {
   color: #184477;
   border-left: 1px solid gray;
   font-family: sans-serif;
@@ -79,15 +83,15 @@
   background: #555;
 }
 
-.head-content{
+.head-content {
   display: flex;
   align-items: center;
 
   margin-bottom: 15px;
 }
 
-.head-content button{
-  padding:10px 15px 10px 15px;
+.head-content button {
+  padding: 10px 15px 10px 15px;
   border-radius: 5px;
   border: none;
   margin-left: 10px;
@@ -95,18 +99,20 @@
   background-color: rgb(51, 158, 51);
   color: white;
   font-size: 16px;
-  transition:0.3s;
+  transition: 0.3s;
   font-weight: 600;
 }
-.head-content button:hover{
-  background-color:rgb(71, 184, 71) ;
+
+.head-content button:hover {
+  background-color: rgb(71, 184, 71);
 }
 
 .head-content img {
-  width:25px;
+  width: 25px;
 
 }
-.head-content div{
+
+.head-content div {
   margin-left: 10px;
   background-color: #2965aa;
   padding: 5px 7px 5px 7px;
@@ -114,7 +120,8 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.head-content div:hover{
+
+.head-content div:hover {
   background-color: #3478c7;
 }
 
@@ -125,7 +132,8 @@
   border-radius: 5px;
   cursor: pointer;
 }
-.update{
+
+.update {
   background-color: rgb(189, 139, 31);
   width: 20px;
   padding: 7px 9px 7px 9px;
@@ -136,19 +144,19 @@
   cursor: pointer;
 }
 
-.info{
+.info {
   width: 35px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.mail{
+.mail {
   width: 27px;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.actions{
+.actions {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -157,10 +165,11 @@
 
 @keyframes rotate {
   from {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
+
   to {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
